@@ -1,0 +1,15 @@
+@import './core/reset.scss';
+@import './core/variables.scss';
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to right, rgb(59, 62, 60), rgb(72, 86, 72));
+  color: white;
+  padding: 2rem;
+
+  &__image {
+    border-radius: 0.8rem;
+  }
+}
