@@ -5,11 +5,104 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(to right, rgb(59, 62, 60), rgb(72, 86, 72));
-  color: white;
+  background-image: linear-gradient(to right, rgb(81, 111, 91), rgb(51, 83, 84));
   padding: 2rem;
 
   &__image {
     border-radius: 0.8rem;
+    padding-bottom: 1rem;
+    width: 30rem;
+
+    @media (min-width: 768px) {
+      width: 50rem;
+    }
+  }
+
+  &__title {
+    color: rgb(86, 180, 100);
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    line-height: 2.3rem;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      width: 60rem;
+      font-size: 2rem;
+      letter-spacing: 0.4rem;
+      line-height: 2.4rem;
+    }
+  }
+}
+
+.main__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 10rem);
+  grid-gap: 6rem;
+  align-items: center;
+  justify-content: center;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(auto-fill, 15rem);
+  }
+
+  &-list {
+    width: 12rem;
+    list-style: none;
+    margin-top: 1.5rem;
+    @media (min-width: 768px) {
+      width: 17rem;
+    }
+  }
+  &-article {
+    background-image: linear-gradient(to bottom, rgb(134, 179, 99), rgb(100, 138, 111));
+    padding-bottom: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  &-image-container {
+    height: 150px;
+    max-width: 150px;
+    @media (min-width: 768px) {
+      height: 220px;
+    }
+  }
+  &-image-characters {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 1rem;
+    object-fit: cover;
+    padding-top: 1rem;
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  letter-spacing: 0.2rem;
+  height: 8rem;
+
+  &__label {
+    font-size: 1.6rem;
+    letter-spacing: 0.3rem;
+    padding: 1rem;
+  }
+
+  &__input {
+    height: 3rem;
+    border-radius: 0.3rem;
+    border: 0.2rem solid rgb(0, 206, 248);
+    color: rgb(61, 61, 146);
+    font-family: 'Zen Dots', cursive;
+    letter-spacing: 0.5rem;
   }
 }

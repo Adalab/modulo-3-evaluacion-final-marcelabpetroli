@@ -1,5 +1,7 @@
+import { FilterByName } from './FilterByName';
+
 const Filters = () => {
-  return;
+  return <FilterByName />;
 };
 
 export { Filters };

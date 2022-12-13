@@ -6,9 +6,11 @@ const CharacterList = ({ characters }) => {
   });
 
   return (
-    <section>
-      <ul>{CharacterElement}</ul>;
-    </section>
+    <main className='main'>
+      <section>
+        <ul className='main__content'>{CharacterElement}</ul>;
+      </section>
+    </main>
   );
 };
 

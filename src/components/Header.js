@@ -1,10 +1,12 @@
-import rickMorty from '../images/rick-and-morty.gif';
+import rickMorty from '../images/rick-morty-3.gif';
 
 const Header = () => {
   return (
     <div className='header'>
-      <img src={rickMorty} alt='Gif Rick and Morty' title='Gif Rick and Morty' className='header__image' />
-      <h1>“Nobody exists on purpose. Nobody belongs anywhere. We’re all going to die. Come watch TV.” — Morty</h1>
+      <img src={rickMorty} alt='Rick and Morty' title='Rick and Morty' className='header__image' />
+      <h1 className='header__title'>
+        “There’s a lesson here, and I’m not going to be the one to figure it out.”<i> — Rick</i>
+      </h1>
     </div>
   );
 };
