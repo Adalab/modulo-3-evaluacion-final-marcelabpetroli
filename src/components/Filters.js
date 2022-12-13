@@ -1,7 +1,7 @@
 import { FilterByName } from './FilterByName';
 
-const Filters = () => {
-  return <FilterByName />;
+const Filters = (props) => {
+  return <FilterByName handleFilterName={props.handleFilterName} />;
 };
 
 export { Filters };

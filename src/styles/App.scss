@@ -13,8 +13,8 @@
     padding-bottom: 1rem;
     width: 30rem;
 
-    @media (min-width: 768px) {
-      width: 50rem;
+    @media (min-width: 1450px) {
+      width: 40rem;
     }
   }
 
@@ -78,6 +78,10 @@
     padding-bottom: 1rem;
     object-fit: cover;
     padding-top: 1rem;
+  }
+  &-title {
+    text-align: center;
+    font-size: 2.5rem;
   }
 }
 
