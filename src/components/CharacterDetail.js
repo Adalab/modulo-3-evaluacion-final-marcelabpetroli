@@ -1,5 +1,6 @@
 import '../styles/components/CharacterDetail.scss';
 import { Link, useParams } from 'react-router-dom';
+import { PageNotFound } from './PageNotFound';
 
 const CharacterDetail = (props) => {
   const params = useParams();
@@ -35,7 +36,7 @@ const CharacterDetail = (props) => {
         </section>
       );
     } else {
-      <h2 className='not__found'>Page not found</h2>;
+      return <PageNotFound />;
     }
   };
 

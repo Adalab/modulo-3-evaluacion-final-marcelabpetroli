@@ -3,12 +3,12 @@ import '../styles/App.scss';
 import { getDataApi } from '../services/api';
 // hooks
 import { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 // components
 import { Header } from './Header';
 import { Filters } from './Filters';
 import { CharacterList } from './CharacterList';
 import { CharacterDetail } from './CharacterDetail';
-import { Routes, Route } from 'react-router-dom';
 
 function App() {
   const [characters, setCharacters] = useState([]);
