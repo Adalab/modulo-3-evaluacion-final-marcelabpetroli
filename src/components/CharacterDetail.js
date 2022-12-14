@@ -20,10 +20,10 @@ const CharacterDetail = (props) => {
                 title={`Photo of ${characterSelected.name}`}
               />
             </div>
-            <p className='details__species'>{characterSelected.species}</p>
-            <p className='details__origin'>{characterSelected.origin}</p>
-            <p className='details__status'>{characterSelected.status}</p>
-            <p className='details__episodes'>Appears in {characterSelected.episode} episodes</p>
+            <p className='details__sub'>Species: {characterSelected.species}</p>
+            <p className='details__sub'>Origin: {characterSelected.origin}</p>
+            <p className='details__sub'>Status: {characterSelected.status}</p>
+            <p className='details__sub'>Appears in {characterSelected.episode} episodes</p>
           </div>
         </article>
         <Link className='details__link' to='/'>
