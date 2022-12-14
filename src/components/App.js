@@ -52,7 +52,7 @@ function App() {
             path='/'
             element={
               <section>
-                <Filters handleFilterName={handleFilterName} />
+                <Filters handleFilterName={handleFilterName} searchName={searchName} />
                 <CharacterList characters={charactersFiltered} />
               </section>
             }
