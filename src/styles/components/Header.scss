@@ -6,9 +6,9 @@
   padding: 2rem;
   margin: 1rem 1rem;
   background-image: url('../../images/rick-morty.gif');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: 100%;
+  background-position: center;
   margin-bottom: 16rem;
 
   @media (min-width: 768px) {
@@ -27,7 +27,7 @@
     letter-spacing: 0.3rem;
     line-height: 2.3rem;
     text-align: center;
-    margin-top: 36rem;
+    margin-top: 37rem;
 
     @media (min-width: 768px) {
       width: 60vw;

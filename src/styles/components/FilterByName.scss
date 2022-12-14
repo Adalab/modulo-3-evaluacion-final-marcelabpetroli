@@ -6,7 +6,7 @@
   background-color: black;
   color: white;
   letter-spacing: 0.2rem;
-  height: 10rem;
+  height: 15rem;
   border-top: 0.7rem solid rgb(81, 77, 131);
   border-bottom: 0.7rem solid rgb(118, 115, 162);
 
@@ -73,8 +73,8 @@
   &__form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     align-items: center;
+    gap: 4rem;
     padding-top: 1rem;
     padding-bottom: 1.5rem;
 
@@ -84,7 +84,7 @@
   }
 
   &__label {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     letter-spacing: 0.3rem;
     text-transform: uppercase;
 
@@ -94,7 +94,6 @@
   }
 
   &__input {
-    height: 2.5rem;
     border-radius: 0.3rem;
     border: 0.2em solid rgb(81, 77, 131);
     color: rgb(51, 43, 105);
@@ -106,5 +105,11 @@
       height: 3.5rem;
       border: 0.3rem solid rgb(81, 77, 131);
     }
+  }
+
+  &__fieldset {
+    border: none;
+    display: flex;
+    align-items: center;
   }
 }

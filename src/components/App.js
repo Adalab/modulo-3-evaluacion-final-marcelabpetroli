@@ -13,6 +13,7 @@ import { Routes, Route } from 'react-router-dom';
 function App() {
   const [characters, setCharacters] = useState([]);
   const [searchName, setSearchName] = useState('');
+  const [searchSpecies, setSearchSpecies] = useState('');
 
   useEffect(() => {
     getDataApi().then((data) => {
@@ -22,6 +23,7 @@ function App() {
 
   const charactersFiltered = characters
     .filter((character) => character.name.toLowerCase().includes(searchName.toLowerCase()))
+    .filter((character) => (searchSpecies === 'all' ? true : character.species.toLowerCase() === searchSpecies.toLowerCase()))
     .sort((a, b) => {
       var nameA = a.name.first;
       var nameB = b.name.first;
@@ -38,6 +40,10 @@ function App() {
     setSearchName(value);
   };
 
+  const handleFilterSpecies = (value) => {
+    setSearchSpecies(value);
+  };
+
   const findCharacter = (id) => {
     return characters.find((character) => parseInt(character.id) === parseInt(id));
   };
@@ -52,7 +58,12 @@ function App() {
             path='/'
             element={
               <section>
-                <Filters handleFilterName={handleFilterName} searchName={searchName} />
+                <Filters
+                  searchName={searchName}
+                  handleFilterName={handleFilterName}
+                  searchSpecies={searchSpecies}
+                  handleFilterSpecies={handleFilterSpecies}
+                />
                 <CharacterList characters={charactersFiltered} />
               </section>
             }
