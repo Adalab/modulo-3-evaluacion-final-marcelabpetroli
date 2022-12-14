@@ -6,7 +6,7 @@ const CharacterDetail = (props) => {
   const characterSelected = props.findCharacter(params.id);
 
   const renderDetails = () => {
-    if (characterSelected !== null) {
+    if (characterSelected !== undefined) {
       return (
         <section className='details'>
           <h1 className='details__title'>Character Details</h1>
