@@ -1,3 +1,4 @@
+import '../styles/components/CharacterDetail.scss';
 import { Link, useParams } from 'react-router-dom';
 
 const CharacterDetail = (props) => {
@@ -5,27 +6,31 @@ const CharacterDetail = (props) => {
   const characterSelected = props.findCharacter(params.id);
 
   return (
-    <>
-      <h1 className='main__content-title'>Character Details</h1>
-      <li className='main__content__selected-list'>
-        <article className='main__content__selected-article'>
-          <h2>{characterSelected.name}</h2>
-          <div className='main__content__selected-image-container'>
-            <img
-              className='main__content__selected-image-characters'
-              src={characterSelected.image}
-              alt={characterSelected.name}
-              title={`Photo of ${characterSelected.name}`}
-            />
+    <section className='details'>
+      <h1 className='details__title'>Character Details</h1>
+      <li className='details__list'>
+        <article className='details__article'>
+          <h2 className='details__name'>{characterSelected.name}</h2>
+          <div className='details__container'>
+            <div className='main__content-image-container'>
+              <img
+                className='main__content-image-characters'
+                src={characterSelected.image}
+                alt={characterSelected.name}
+                title={`Photo of ${characterSelected.name}`}
+              />
+            </div>
+            <p className='details__species'>{characterSelected.species}</p>
+            <p className='details__origin'>{characterSelected.origin}</p>
+            <p className='details__status'>{characterSelected.status}</p>
+            <p className='details__episodes'>Appears in {characterSelected.episode} episodes</p>
           </div>
-          <p className='main__content__selected-species-'>{characterSelected.species}</p>
-          <p>{characterSelected.origin}</p>
-          <p>{characterSelected.status}</p>
-          <p>Appears in {characterSelected.episode} episodes</p>
         </article>
-        <Link to='/'>Go back </Link>
+        <Link className='details__link' to='/'>
+          Go back
+        </Link>
       </li>
-    </>
+    </section>
   );
 };
 

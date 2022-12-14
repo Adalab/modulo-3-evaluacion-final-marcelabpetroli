@@ -1,0 +1,44 @@
+.header {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin: 1rem 1rem;
+  background-image: url('../../images/rick-morty.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100%;
+  margin-bottom: 16rem;
+
+  @media (min-width: 768px) {
+    height: 90vh;
+    width: 100%;
+    background-image: url('../../images/rick-morty.jpeg');
+    background-size: contain;
+    background-position: center;
+    margin-bottom: 6rem;
+  }
+
+  &__title {
+    width: 80vw;
+    color: rgb(249, 249, 249);
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    line-height: 2.3rem;
+    text-align: center;
+    margin-top: 36rem;
+
+    @media (min-width: 768px) {
+      width: 60vw;
+      font-size: 2rem;
+      letter-spacing: 0.4rem;
+      line-height: 2.4rem;
+      margin-top: 60rem;
+    }
+    @media (min-width: 1084px) {
+      width: 100vw;
+      margin-top: 68rem;
+    }
+  }
+}
