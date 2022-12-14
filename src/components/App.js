@@ -13,7 +13,7 @@ import { Routes, Route } from 'react-router-dom';
 function App() {
   const [characters, setCharacters] = useState([]);
   const [searchName, setSearchName] = useState('');
-  const [searchSpecies, setSearchSpecies] = useState('');
+  const [searchSpecies, setSearchSpecies] = useState('all');
 
   useEffect(() => {
     getDataApi().then((data) => {
