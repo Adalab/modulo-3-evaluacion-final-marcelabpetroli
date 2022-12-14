@@ -24,16 +24,8 @@ function App() {
   const charactersFiltered = characters
     .filter((character) => character.name.toLowerCase().includes(searchName.toLowerCase()))
     .filter((character) => (searchSpecies === 'all' ? true : character.species.toLowerCase() === searchSpecies.toLowerCase()))
-    .sort((a, b) => {
-      var nameA = a.name.first;
-      var nameB = b.name.first;
-      if (nameA < nameB) {
-        return -1;
-      }
-      if (nameA > nameB) {
-        return 1;
-      }
-      return 0;
+    .sort(function (a, b) {
+      return a.name.localeCompare(b.name);
     });
 
   const handleFilterName = (value) => {
