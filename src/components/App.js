@@ -42,14 +42,13 @@ function App() {
 
   return (
     <>
-      <Header />
-
       <main className='main'>
         <Routes>
           <Route
             path='/'
             element={
               <section>
+                <Header />
                 <Filters
                   searchName={searchName}
                   handleFilterName={handleFilterName}
