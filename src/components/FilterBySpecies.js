@@ -6,7 +6,7 @@ const FilterBySpecies = (props) => {
   return (
     <fieldset className='search__fieldset'>
       <label className='search__label' htmlFor='species'>
-        Species
+        Species:
       </label>
       <select className='search__input' name='species' id='species' onChange={handleSelect} value={props.searchSpecies}>
         <option value='all'>choose</option>

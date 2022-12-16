@@ -11,6 +11,7 @@ const getDataApi = () => {
           species: character.species,
           origin: character.origin.name,
           episode: character.episode.length,
+          location: character.location.name,
         };
       });
       return cleanData;

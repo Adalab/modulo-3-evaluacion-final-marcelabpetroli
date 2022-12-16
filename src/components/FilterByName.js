@@ -8,7 +8,7 @@ const FilterByName = (props) => {
   return (
     <fieldset className='search__fieldset'>
       <label className='search__label' htmlFor='name'>
-        Search
+        Search:
       </label>
       <input
         className='search__input'

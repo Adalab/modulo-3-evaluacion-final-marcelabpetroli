@@ -1,5 +1,6 @@
 import { FilterByName } from './FilterByName';
 import { FilterBySpecies } from './FilterBySpecies';
+import { FilterByLocation } from './FilterByLocation';
 
 const Filters = (props) => {
   const handleForm = (ev) => {
@@ -14,6 +15,7 @@ const Filters = (props) => {
       <form className='search__form' onSubmit={handleForm}>
         <FilterByName searchName={props.searchName} handleFilterName={props.handleFilterName} />
         <FilterBySpecies searchSpecies={props.searchSpecies} handleFilterSpecies={props.handleFilterSpecies} />
+        <FilterByLocation searchLocation={props.searchLocation} handleFilterLocation={props.handleFilterLocation} />
       </form>
     </section>
   );

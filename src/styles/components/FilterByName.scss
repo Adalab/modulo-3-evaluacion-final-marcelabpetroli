@@ -6,7 +6,7 @@
   background-color: black;
   color: white;
   letter-spacing: 0.2rem;
-  height: 15rem;
+  height: 18rem;
   border-top: 0.7rem solid rgb(81, 77, 131);
   border-bottom: 0.7rem solid rgb(118, 115, 162);
 
@@ -74,11 +74,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4rem;
-    padding-top: 1rem;
-    padding-bottom: 1.5rem;
+    gap: 2rem;
 
     @media (min-width: 768px) {
+      gap: 4rem;
       flex-direction: row;
     }
   }
@@ -89,7 +88,7 @@
     text-transform: uppercase;
 
     @media (min-width: 768px) {
-      font-size: 2.4rem;
+      font-size: 1.8rem;
     }
   }
 
@@ -97,13 +96,15 @@
     border-radius: 0.3rem;
     border: 0.2em solid rgb(81, 77, 131);
     color: rgb(51, 43, 105);
+    font-size: 1.2rem;
     font-family: 'Zen Dots', cursive;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.3rem;
     padding: 0.5rem;
 
     @media (min-width: 768px) {
       height: 3.5rem;
       border: 0.3rem solid rgb(81, 77, 131);
+      font-size: 1.4rem;
     }
   }
 

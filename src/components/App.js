@@ -14,6 +14,7 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [searchName, setSearchName] = useState('');
   const [searchSpecies, setSearchSpecies] = useState('all');
+  const [searchLocation, setSearchLocation] = useState('');
 
   useEffect(() => {
     getDataApi().then((data) => {
@@ -22,6 +23,7 @@ function App() {
   }, []);
 
   const charactersFiltered = characters
+    .filter((character) => character.location.toLowerCase().includes(searchLocation.toLowerCase()))
     .filter((character) => character.name.toLowerCase().includes(searchName.toLowerCase()))
     .filter((character) => (searchSpecies === 'all' ? true : character.species.toLowerCase() === searchSpecies.toLowerCase()))
     .sort(function (a, b) {
@@ -36,6 +38,9 @@ function App() {
     setSearchSpecies(value);
   };
 
+  const handleFilterLocation = (value) => {
+    setSearchLocation(value);
+  };
   const findCharacter = (id) => {
     return characters.find((character) => parseInt(character.id) === parseInt(id));
   };
@@ -54,6 +59,8 @@ function App() {
                   handleFilterName={handleFilterName}
                   searchSpecies={searchSpecies}
                   handleFilterSpecies={handleFilterSpecies}
+                  searchLocation={searchLocation}
+                  handleFilterLocation={handleFilterLocation}
                 />
                 <CharacterList characters={charactersFiltered} />
               </section>
